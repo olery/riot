@@ -3026,6 +3026,7 @@
 
     if (impl && root) { tag = createTag(impl, conf, innerHTML); }
 
+    if (!root.parentElement) return tag
     if (tag && tag.mount) {
       tag.mount(true);
       // add this tag to the virtualDom variable
